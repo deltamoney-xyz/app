@@ -32,7 +32,7 @@ export const hippoWalletClient = async (account) => {
     );
   } catch (err) {
     console.log("Get hippo wallet client failed", err);
-    errorHandler(err);
+    // errorHandler(err);
   }
 
   return walletClient;
@@ -49,7 +49,7 @@ export const hippoSwapClient = async () => {
     );
   } catch (err) {
     console.log("Get hippo swap client failed", err);
-    errorHandler(err);
+    // errorHandler(err);
   }
 
   return swapClient;
@@ -61,7 +61,7 @@ export const hippoTradeAggregator = async () => {
     agg = await TradeAggregator.create(aptosClient);
   } catch (err) {
     console.log("Get hippo trade aggregator failed", err);
-    errorHandler(err);
+    // errorHandler(err);
   }
   return agg;
 };
@@ -76,7 +76,7 @@ export const coinListClient = async () => {
     );
   } catch (err) {
     console.log("Get coin list client failed", err);
-    errorHandler(err);
+    // errorHandler(err);
   }
 
   return client;
