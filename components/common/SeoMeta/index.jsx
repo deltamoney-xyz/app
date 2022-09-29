@@ -110,6 +110,7 @@ export default function SeoMeta({
       <meta property="og:image:height" content="630" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@wearedeltamoney" />
+      <link rel="icon" href={DMSEO.url + DMSEO.favicon} />
       {noindex ? (
         <meta name="robots" content="noindex, nofollow" />
       ) : (

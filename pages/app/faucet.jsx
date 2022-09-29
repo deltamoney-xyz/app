@@ -1,15 +1,19 @@
-import styles from "../../styles/pages/app.module.scss";
 import httpAuthCheck from "logic/httpAuthCheck";
+import SeoMeta from "components/common/SeoMeta";
+import styles from "styles/pages/app.module.scss";
 
 export default function PageFaucet() {
   return (
-    <div className="wrap-fluid">
-      <div className={styles.head}>
-        <div className={styles.balance} data-color="blue">
-          <div className={styles.balanceTitle}>Coming soon...</div>
+    <>
+      <SeoMeta type="faucet" />
+      <div className="wrap-fluid">
+        <div className={styles.head}>
+          <div className={styles.balance} data-color="blue">
+            <div className={styles.balanceTitle}>Coming soon...</div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

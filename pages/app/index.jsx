@@ -7,6 +7,7 @@ import {
   TxnBuilderTypes,
 } from "aptos";
 
+import SeoMeta from "components/common/SeoMeta";
 import VaultCard from "components/cards/VaultCard";
 
 import useAptosWallet from "hooks/useAptosWallet";
@@ -68,63 +69,67 @@ export default function PageStaking({ vaults }) {
   }, [walletAddress]);
 
   return (
-    <div className="wrap-fluid">
-      <div className={styles.head}>
-        <div className={styles.highlights}>
-          {/*<div className={styles.subtitle}>APY highlights:</div>*/}
-          {/*<ul className={styles.highlightsList}>*/}
-          {/*  <li>*/}
-          {/*    <img*/}
-          {/*      src="/static/img/svg/coins/sushi.svg"*/}
-          {/*      width={16}*/}
-          {/*      height={16}*/}
-          {/*    />*/}
-          {/*    <span className={styles.highlightsListToken}>SUSHI:</span>*/}
-          {/*    <span className={styles.highlightsListApy}>27.89%</span>*/}
-          {/*  </li>*/}
-          {/*  <li>*/}
-          {/*    <img*/}
-          {/*      src="/static/img/svg/coins/aptos.svg"*/}
-          {/*      width={16}*/}
-          {/*      height={16}*/}
-          {/*    />*/}
-          {/*    <span className={styles.highlightsListToken}>APTOS:</span>*/}
-          {/*    <span className={styles.highlightsListApy}>89.12%</span>*/}
-          {/*  </li>*/}
-          {/*  <li>*/}
-          {/*    <img*/}
-          {/*      src="/static/img/svg/coins/usdc.svg"*/}
-          {/*      width={16}*/}
-          {/*      height={16}*/}
-          {/*    />*/}
-          {/*    <div className={styles.highlightsListToken}>USDC:</div>*/}
-          {/*    <div className={styles.highlightsListApy}>56.23%</div>*/}
-          {/*  </li>*/}
-          {/*  <li>*/}
-          {/*    <img src="/static/img/svg/coins/btc.svg" width={16} height={16}/>*/}
-          {/*    <span className={styles.highlightsListToken}>BTC:</span>*/}
-          {/*    <span className={styles.highlightsListApy}>16.23%</span>*/}
-          {/*  </li>*/}
-          {/*</ul>*/}
-        </div>
-        {/*<div className={styles.tvl}>*/}
-        {/*  <div className={styles.subtitle}>TVL:</div>*/}
-        {/*  <div className={styles.tvlNum}>$1,974,792.19</div>*/}
-        {/*</div>*/}
-      </div>
+    <>
+      <SeoMeta type="app" />
 
-      <div className={styles.grid}>
-        {vaults.map((item, idx) => (
-          <VaultCard
-            data={item}
-            key={idx}
-            aptosClient={aptosClient}
-            balanceUserAptos={balanceUserAptos}
-            walletAddress={walletAddress}
-          />
-        ))}
+      <div className="wrap-fluid">
+        <div className={styles.head}>
+          <div className={styles.highlights}>
+            {/*<div className={styles.subtitle}>APY highlights:</div>*/}
+            {/*<ul className={styles.highlightsList}>*/}
+            {/*  <li>*/}
+            {/*    <img*/}
+            {/*      src="/static/img/svg/coins/sushi.svg"*/}
+            {/*      width={16}*/}
+            {/*      height={16}*/}
+            {/*    />*/}
+            {/*    <span className={styles.highlightsListToken}>SUSHI:</span>*/}
+            {/*    <span className={styles.highlightsListApy}>27.89%</span>*/}
+            {/*  </li>*/}
+            {/*  <li>*/}
+            {/*    <img*/}
+            {/*      src="/static/img/svg/coins/aptos.svg"*/}
+            {/*      width={16}*/}
+            {/*      height={16}*/}
+            {/*    />*/}
+            {/*    <span className={styles.highlightsListToken}>APTOS:</span>*/}
+            {/*    <span className={styles.highlightsListApy}>89.12%</span>*/}
+            {/*  </li>*/}
+            {/*  <li>*/}
+            {/*    <img*/}
+            {/*      src="/static/img/svg/coins/usdc.svg"*/}
+            {/*      width={16}*/}
+            {/*      height={16}*/}
+            {/*    />*/}
+            {/*    <div className={styles.highlightsListToken}>USDC:</div>*/}
+            {/*    <div className={styles.highlightsListApy}>56.23%</div>*/}
+            {/*  </li>*/}
+            {/*  <li>*/}
+            {/*    <img src="/static/img/svg/coins/btc.svg" width={16} height={16}/>*/}
+            {/*    <span className={styles.highlightsListToken}>BTC:</span>*/}
+            {/*    <span className={styles.highlightsListApy}>16.23%</span>*/}
+            {/*  </li>*/}
+            {/*</ul>*/}
+          </div>
+          {/*<div className={styles.tvl}>*/}
+          {/*  <div className={styles.subtitle}>TVL:</div>*/}
+          {/*  <div className={styles.tvlNum}>$1,974,792.19</div>*/}
+          {/*</div>*/}
+        </div>
+
+        <div className={styles.grid}>
+          {vaults.map((item, idx) => (
+            <VaultCard
+              data={item}
+              key={idx}
+              aptosClient={aptosClient}
+              balanceUserAptos={balanceUserAptos}
+              walletAddress={walletAddress}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

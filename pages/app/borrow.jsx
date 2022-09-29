@@ -6,18 +6,11 @@ import Modal from "components/common/Modal";
 import Button from "components/common/Button";
 
 import { numberFormat, stringToHex } from "logic/helpers";
-
-import {
-  AptosClient,
-  AptosAccount,
-  FaucetClient,
-  BCS,
-  TxnBuilderTypes,
-} from "aptos";
+import httpAuthCheck from "logic/httpAuthCheck";
+import walletProvider from "lib/walletProvider";
 
 import styles from "styles/pages/app.module.scss";
-import walletProvider from "lib/walletProvider";
-import httpAuthCheck from "../../logic/httpAuthCheck";
+import SeoMeta from "../../components/common/SeoMeta";
 
 export default function PageApp() {
   const [balanceSupply, setBalanceSupply] = useState(45);
@@ -129,6 +122,8 @@ export default function PageApp() {
 
   return (
     <>
+      <SeoMeta type="borrow" />
+
       <div className="wrap-fluid">
         <div className={styles.head}>
           <div className={styles.balance} data-color="green">
