@@ -1,0 +1,55 @@
+/* Base Elements */
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  color: var(--body-color);
+  font-family: var(--font-mulish);
+  font-size: 1rem;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--body-bg);
+  //background-image: url('/static/img/pages/home/bg.png');
+  background-image: url('/static/img/pages/home/bg-wide.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  transition: var(--transition);
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1448px;
+  padding: 0 100px;
+  margin: 0 auto;
+  @include media($laptop) {
+    padding: 0 52px;
+  }
+  @include media($tablet) {
+    padding: 0 24px;
+  }
+  @include media($phone) {
+    padding: 0 16px;
+  }
+}
+
+.wrap-fluid {
+  width: 100%;
+  padding: 0 56px;
+  @include media($laptop) {
+    padding: 0 32px;
+  }
+  @include media($tablet) {
+    padding: 0 24px;
+  }
+  @include media($phone) {
+    padding: 0 16px;
+  }
+}

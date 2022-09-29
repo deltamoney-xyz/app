@@ -1,0 +1,121 @@
+@import "./styles/helpers/vars";
+@import "./styles/helpers/mixins";
+
+.advert {
+	background: var(--gradient);
+	font-size: 15px;
+	font-weight: 600;
+	text-align: center;
+	padding: 9px 16px;
+}
+
+.header {
+	position: relative;
+	padding: 16px 0;
+}
+
+.wrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@include media($tablet) {
+		flex-wrap: wrap;
+	}
+}
+
+.logo {
+	display: inline-block;
+	font-size: 0;
+	@include media($tablet) {
+		order: 1;
+	}
+}
+
+.button {
+	position: relative;
+	span {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		color: var(--brand);
+		font-size: 10px;
+		line-height: 1.6;
+		text-transform: uppercase;
+		letter-spacing: .8px;
+		top: calc(100% + 4px);
+		white-space: nowrap;
+	}
+	@include media($tablet) {
+		order: 2;
+	}
+}
+
+.controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include media($tablet) {
+		order: 2;
+	}
+}
+
+.toggleMenu {
+	order: 2;
+	display: none;
+	background-color: transparent;
+	width: 24px;
+	height: 24px;
+	border: 0;
+	padding: 0;
+	font-size: 0;
+	cursor: pointer;
+	position: relative;
+
+	&.isPressed {
+		&:before {
+			top: 11px;
+			transform: rotate(-135deg);
+		}
+
+		&:after {
+			top: 11px;
+			transform: rotate(135deg);
+		}
+
+		span {
+			opacity: 0;
+		}
+	}
+
+	&:before, &:after {
+		content: '';
+	}
+
+	&:before, &:after, span {
+		position: absolute;
+		left: 0;
+		width: 24px;
+		height: 2px;
+		border-radius: 2px;
+		background-color: var(--white);
+		transition: var(--transition);
+	}
+
+	&:before {
+		top: 5px;
+	}
+
+	span {
+		top: 11px;
+	}
+
+	&:after {
+		top: 17px;
+	}
+
+	@include media($tablet) {
+		display: inline-block;
+		margin-left: 16px;
+	}
+}

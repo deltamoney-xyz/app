@@ -1,0 +1,10 @@
+@import "./styles/helpers/vars";
+@import "./styles/helpers/mixins";
+
+.section {
+	margin-top: 160px;
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}

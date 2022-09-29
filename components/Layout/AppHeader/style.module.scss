@@ -1,0 +1,43 @@
+@import "./styles/helpers/vars";
+@import "./styles/helpers/mixins";
+
+.header {
+  padding: 24px 0 48px;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 0;
+  display: none;
+  @include media($tablet) {
+    display: inline-block;
+  }
+}
+
+.btnConnect {
+  margin-left: auto;
+  img {
+    margin-right: 8px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    background-color: var(--white);
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-left: auto;
+
+  .info {
+    color: var(--text-secondary);
+    font-size: 14px;
+  }
+}

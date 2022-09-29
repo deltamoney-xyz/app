@@ -1,0 +1,30 @@
+a {
+  text-decoration: none;
+  color: var(--body-color);
+  transition: var(--transition);
+  &:hover {
+    color: var(--body-color);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  min-height: 1px;
+}
+
+.tac {
+  text-align: center;
+}
+
+.tar {
+  text-align: right;
+}
+
+button, input, textarea, select {
+  outline: none;
+}
+
+input[type="text"] {
+  appearance: none;
+}

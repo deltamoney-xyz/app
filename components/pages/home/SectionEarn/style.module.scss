@@ -1,0 +1,69 @@
+@import "./styles/helpers/vars";
+@import "./styles/helpers/mixins";
+
+.section {
+	margin-top: 200px;
+	@include media($tablet) {
+		margin-top: 80px;
+	}
+}
+
+.block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	//display: grid;
+	//grid-template-columns: 718px 1fr;
+	//grid-gap: 130px;
+
+	@include media($laptop-middle) {
+		display: grid;
+		grid-gap: 130px;
+		grid-template-columns: 1fr 1fr;
+	}
+	@include media($tablet) {
+		display: block;
+		h3 {
+			text-align: center;
+		}
+	}
+}
+
+.content {
+	order: 2;
+	margin-left: 130px;
+	@include media($laptop-middle) {
+		margin-left: 0;
+	}
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 56px;
+	align-items: center;
+	margin-top: 56px;
+	@include media($tablet) {
+		margin-top: 32px;
+	}
+}
+
+.item {
+	img {
+		display: block;
+		background-color: var(--dark);
+		border-radius: 8px;
+	}
+	p {
+		margin: 16px 0 0;
+		color: var(--text-secondary);
+	}
+}
+
+.media {
+	order: 1;
+	font-size: 0;
+	@include media($tablet) {
+		margin-top: 32px;
+	}
+}

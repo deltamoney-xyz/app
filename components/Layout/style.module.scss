@@ -1,0 +1,16 @@
+@import "./styles/helpers/vars";
+@import "./styles/helpers/mixins";
+
+.parent {
+	display: flex;
+	background-color: #090B1C;
+	@include media($tablet) {
+		display: block;
+	}
+}
+
+.main {
+	flex: 1;
+	min-height: 100vh;
+	padding-bottom: 80px;
+}

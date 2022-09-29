@@ -1,0 +1,74 @@
+@import "./styles/helpers/vars";
+@import "./styles/helpers/mixins";
+
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 294px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(#13131F, .3);
+  backdrop-filter: blur(6px);
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+  z-index: var(--z5);
+
+  &.isVisible {
+    opacity: 1;
+    pointer-events: all;
+
+    .modal {
+      transform: translateY(0);
+    }
+  }
+
+  @include media($tablet) {
+    align-items: flex-start;
+    padding-top: 72px;
+    width: 100%;
+  }
+}
+
+.modal {
+  width: 100%;
+  max-width: 464px;
+  background-color: #12152D;
+  border-radius: 12px;
+  padding: 24px 32px 64px;
+  position: relative;
+  transform: translateY(24px);
+  transition: var(--transition);
+  @include media($phablet) {
+    padding: 24px;
+  }
+}
+
+.btnClose {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: transparent;
+
+  &.withHead {
+    top: 32px;
+  }
+
+  &:hover svg {
+    stroke: var(--white);
+  }
+
+  svg {
+    transition: var(--transition);
+  }
+}

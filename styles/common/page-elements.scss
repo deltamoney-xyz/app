@@ -1,0 +1,27 @@
+body.hide-footer {
+	footer[class*="style_footer"] {
+		display: none;
+	}
+}
+
+body {
+	.tippy-box {
+		font-size: 12px !important;
+		line-height: 1.3 !important;
+		font-weight: 400 !important;
+		color: var(--body-color) !important;
+		border-radius: 8px;
+		background-color: var(--vault-bg-hover) !important;
+		max-width: unset !important;
+	}
+	.tippy-content {
+		padding: 12px 12px;
+		text-transform: initial !important;
+		div {
+			text-transform: initial !important;
+		}
+	}
+	.tippy-arrow {
+		color: var(--vault-bg-hover) !important;
+	}
+}

@@ -1,0 +1,133 @@
+:root {
+  /* === === === === === */
+  /* FONTS */
+  /* === === === === === */
+  --font-mulish: 'Mulish', Helvetica, Arial, sans-serif;
+
+  /* === === === === === */
+  /* COLORS */
+  /* === === === === === */
+  --brand: #41C6FF;
+  --dark: #0E0F31;
+  --white: #FFFFFF;
+
+  /* Elements */
+  --body-color: #FFFFFF;
+  --body-bg: #080828;
+  --plate-bg: #121528;
+  --vault-bg: #101224;
+  --vault-bg-hover: #151831;
+  --wallet-bg-hover: #242849;
+
+  /* Gradients */
+  --gradient: linear-gradient(57.01deg, #3C40E6 4.64%, #03B3FF 79.83%);
+  //--gradient-hover: linear-gradient(57.01deg, #1C21F7 4.64%, #5ACDFF 79.83%);
+  --gradient-hover: linear-gradient(57.01deg, #5961FF 4.64%, #5FCFFF 79.83%);
+  --gradient-vault: linear-gradient(81.52deg, #403CE6 0%, #03B3FF 100%);
+  --gradient-red: linear-gradient(57.01deg, #FF3003 4.64%, #E6563C 79.83%);
+  --gradient-red-hover: linear-gradient(57.01deg, #FF5B37 4.64%, #FF7B64 79.83%);
+
+  /* Colors */
+  --blue: #03B3FF;
+  --purple-blue: #5961FF;
+  --green: #13E868;
+  --red: #FF4003;
+
+  /* Alpha Colors */
+  --white-02: rgba(255, 255, 255, .02);
+  --white-05: rgba(255, 255, 255, .05);
+  --white-10: rgba(255, 255, 255, .1);
+  --white-15: rgba(255, 255, 255, .15);
+  --white-20: rgba(255, 255, 255, .2);
+  --white-25: rgba(255, 255, 255, .25);
+  --white-30: rgba(255, 255, 255, .3);
+  --white-35: rgba(255, 255, 255, .35);
+  --white-40: rgba(255, 255, 255, .4);
+  --white-45: rgba(255, 255, 255, .45);
+  --white-50: rgba(255, 255, 255, .5);
+  --white-55: rgba(255, 255, 255, .55);
+  --white-60: rgba(255, 255, 255, .6);
+  --white-65: rgba(255, 255, 255, .65);
+  --white-70: rgba(255, 255, 255, .7);
+  --white-75: rgba(255, 255, 255, .75);
+  --white-80: rgba(255, 255, 255, .8);
+  --white-85: rgba(255, 255, 255, .85);
+  --white-90: rgba(255, 255, 255, .9);
+  --white-95: rgba(255, 255, 255, .95);
+
+  --black-05: rgba(0, 0, 0, .05);
+  --black-10: rgba(0, 0, 0, .1);
+  --black-15: rgba(0, 0, 0, .15);
+  --black-20: rgba(0, 0, 0, .2);
+  --black-25: rgba(0, 0, 0, .25);
+  --black-30: rgba(0, 0, 0, .3);
+  --black-35: rgba(0, 0, 0, .35);
+  --black-40: rgba(0, 0, 0, .4);
+  --black-45: rgba(0, 0, 0, .45);
+  --black-50: rgba(0, 0, 0, .5);
+  --black-55: rgba(0, 0, 0, .55);
+  --black-60: rgba(0, 0, 0, .6);
+  --black-65: rgba(0, 0, 0, .65);
+  --black-70: rgba(0, 0, 0, .7);
+  --black-75: rgba(0, 0, 0, .75);
+  --black-80: rgba(0, 0, 0, .8);
+  --black-85: rgba(0, 0, 0, .85);
+  --black-90: rgba(0, 0, 0, .9);
+  --black-95: rgba(0, 0, 0, .95);
+
+  /* COLOR SCHEME */
+  --text-primary: #FFFFFF;
+  --text-secondary: #919BB9;
+
+  /* Socials Colors */
+  --social-facebook: #4352A2;
+  --social-messenger: #00B2FF;
+  --social-telegram: #0088CC;
+  --social-linkedin: #2867B2;
+  --social-twitter: #0A99FD;
+  --social-google: #DD4B39;
+  --social-instagram: #E1306C;
+  --social-youtube: #FD0000;
+  --social-viber: #7360F2;
+  --social-pinterest: #E60023;
+  --social-tiktok: #4BE1EC;
+  --social-reddit: #FF4500;
+  --social-pocket: #EF4056;
+  --social-rss: #EA6221;
+
+  /* === === === === === */
+  /* SETTINGS */
+  /* === === === === === */
+  /* Transitions */
+  --transition: all .125s ease-in-out;
+  --transition-long: all .3s ease-in-out;
+  --cubic-bezier: all .6s cubic-bezier(0.68, 0, 0.265, 1);
+
+  /* Z-indexes */
+  --z: 1000;
+  --z1: 1100;
+  --z2: 1200;
+  --z3: 1300;
+  --z4: 1400;
+  --z5: 1500;
+}
+
+/* Helpers */
+@import "./helpers/vars";
+@import "./helpers/mixins";
+
+/* Libs */
+@import "./node_modules/react-loading-skeleton/dist/skeleton";
+@import "./node_modules/antd/lib/message/style";
+
+/* Base */
+@import "./base/fonts";
+@import "./base/base";
+
+/* Common */
+@import "./common/utilities";
+@import "./common/typography";
+@import "./common/page-elements";
+
+/* Components */
+@import "./components/components";

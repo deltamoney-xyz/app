@@ -1,0 +1,75 @@
+@import "./styles/helpers/vars";
+@import "./styles/helpers/mixins";
+
+.modal {
+  padding: 12px 20px;
+  width: 340px;
+  @include media($phone) {
+    width: 280px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.btnConnect {
+  margin-left: auto;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
+.description {
+  button:not(:last-child) {
+    margin-right: 12px;
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px 12px;
+
+  button {
+    background-color: transparent;
+    border: 0;
+    padding: 26px 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--wallet-bg-hover);
+    }
+
+    img {
+      margin-bottom: 14px;
+      border-radius: 50%;
+      border: 2px solid var(--white);
+      background-color: var(--white);
+    }
+  }
+
+  @include media($phone) {
+    button {
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 0.875rem;
+
+      img {
+        width: 48px;
+      }
+    }
+  }
+}
