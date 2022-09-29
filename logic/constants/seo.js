@@ -2,7 +2,7 @@ export const DMSEO = {
   title: "DeltaMoney",
   og: "/og-image.png",
   favicon: "/favicon.png",
-  url: "https://deltamoney.xyz/",
+  url: "https://deltamoney.xyz",
   pages: {
     home: {
       title: "DeltaMoney",

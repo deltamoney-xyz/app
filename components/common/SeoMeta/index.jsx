@@ -25,51 +25,50 @@ export default function SeoMeta({
           <meta property="og:title" content={DMSEO.pages[type].title} />
           <meta name="twitter:title" content={DMSEO.pages[type].title} />
           {DMSEO.pages[type].hasOwnProperty("description") && (
-            <>
-              <meta
-                property="og:description"
-                content={DMSEO.pages[type].description}
-              />
-              <meta
-                name="twitter:description"
-                content={DMSEO.pages[type].description}
-              />
-              <meta
-                name="description"
-                content={DMSEO.pages[type].description}
-              />
-            </>
+            <meta
+              property="og:description"
+              content={DMSEO.pages[type].description}
+            />
+          )}
+          {DMSEO.pages[type].hasOwnProperty("description") && (
+            <meta
+              name="twitter:description"
+              content={DMSEO.pages[type].description}
+            />
+          )}
+          {DMSEO.pages[type].hasOwnProperty("description") && (
+            <meta name="description" content={DMSEO.pages[type].description} />
           )}
           {DMSEO.pages[type].hasOwnProperty("keywords") &&
             DMSEO.pages[type].keywords !== "" && (
-              <>
-                <meta name="keywords" content={DMSEO.pages[type].keywords} />
-              </>
+              <meta name="keywords" content={DMSEO.pages[type].keywords} />
             )}
           {DMSEO.pages[type].hasOwnProperty("og") ? (
-            <>
-              <meta
-                property="og:image"
-                content={DMSEO.url + DMSEO.pages[type].og}
-              />
-              <meta
-                property="og:image:secure_url"
-                content={DMSEO.url + DMSEO.pages[type].og}
-              />
-              <meta
-                name="twitter:image"
-                content={DMSEO.url + DMSEO.pages[type].og}
-              />
-            </>
+            <meta
+              property="og:image"
+              content={DMSEO.url + DMSEO.pages[type].og}
+            />
           ) : (
-            <>
-              <meta property="og:image" content={DMSEO.url + DMSEO.og} />
-              <meta
-                property="og:image:secure_url"
-                content={DMSEO.url + DMSEO.og}
-              />
-              <meta name="twitter:image" content={DMSEO.url + DMSEO.og} />
-            </>
+            <meta property="og:image" content={DMSEO.url + DMSEO.og} />
+          )}
+          {DMSEO.pages[type].hasOwnProperty("og") ? (
+            <meta
+              property="og:image:secure_url"
+              content={DMSEO.url + DMSEO.pages[type].og}
+            />
+          ) : (
+            <meta
+              property="og:image:secure_url"
+              content={DMSEO.url + DMSEO.og}
+            />
+          )}
+          {DMSEO.pages[type].hasOwnProperty("og") ? (
+            <meta
+              name="twitter:image"
+              content={DMSEO.url + DMSEO.pages[type].og}
+            />
+          ) : (
+            <meta name="twitter:image" content={DMSEO.url + DMSEO.og} />
           )}
         </>
       ) : (
