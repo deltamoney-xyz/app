@@ -11,6 +11,7 @@ import walletProvider from "lib/walletProvider";
 
 import styles from "styles/pages/app.module.scss";
 import SeoMeta from "../../components/common/SeoMeta";
+import { Image } from "antd";
 
 export default function PageApp() {
   const [balanceSupply, setBalanceSupply] = useState(45);
@@ -178,7 +179,7 @@ export default function PageApp() {
                     >
                       <td>
                         <span>
-                          <img
+                          <Image
                             src={`/static/img/svg/coins/${item.slug.toLowerCase()}.svg`}
                             alt=""
                             width={40}
@@ -227,7 +228,7 @@ export default function PageApp() {
                     >
                       <td>
                         <span>
-                          <img
+                          <Image
                             src={`/static/img/svg/coins/${item.slug.toLowerCase()}.svg`}
                             alt=""
                             width={40}
@@ -263,7 +264,7 @@ export default function PageApp() {
         {Object.keys(selectedCoin).length > 0 && (
           <>
             <div className={styles.modalHead}>
-              <img
+              <Image
                 src={`/static/img/svg/coins/${selectedCoin.slug.toLowerCase()}.svg`}
                 alt=""
                 width={56}
@@ -275,7 +276,7 @@ export default function PageApp() {
 
             <ul className={styles.modalList}>
               <li>
-                <img
+                <Image
                   src={`/static/img/svg/coins/${selectedCoin.slug.toLowerCase()}.svg`}
                   alt=""
                   width={40}
@@ -291,7 +292,7 @@ export default function PageApp() {
                 </span>
               </li>
               <li>
-                <img
+                <Image
                   src="/static/img/svg/icons/rate.svg"
                   alt=""
                   width={40}
@@ -409,7 +410,7 @@ export default function PageApp() {
         {Object.keys(selectedCoin).length > 0 && (
           <>
             <div className={styles.modalHead}>
-              <img
+              <Image
                 src={`/static/img/svg/coins/${selectedCoin.slug.toLowerCase()}.svg`}
                 alt=""
                 width={56}
@@ -421,7 +422,7 @@ export default function PageApp() {
 
             <ul className={styles.modalList}>
               <li>
-                <img
+                <Image
                   src={`/static/img/svg/coins/${selectedCoin.slug.toLowerCase()}.svg`}
                   alt=""
                   width={40}
@@ -435,7 +436,7 @@ export default function PageApp() {
                 </span>
               </li>
               <li>
-                <img
+                <Image
                   src="/static/img/svg/icons/rate.svg"
                   alt=""
                   width={40}

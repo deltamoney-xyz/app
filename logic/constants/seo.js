@@ -28,5 +28,15 @@ export const DMSEO = {
         "DeltaMoney offers leveraged yield farming positions that allow users to grow their principles and earn more profits.",
       keywords: "",
     },
+    404: {
+      title: "DeltaMoney | Error 404",
+      description: "Unfortunately, we couldn't find the page, that you need",
+      keywords: "",
+    },
+    500: {
+      title: "DeltaMoney | Error 500",
+      description: "Woops, Something went wrong ...",
+      keywords: "",
+    },
   },
 };

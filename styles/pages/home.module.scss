@@ -32,19 +32,26 @@
 	li {
 		position: relative;
 		&:not(:last-child) {
-			margin-right: 40px;
+			margin-right: 8px;
 		}
 		span {
 			position: absolute;
 			left: 50%;
 			transform: translateX(-50%);
-			color: var(--brand);
+			color: var(--deep-green);
 			font-size: 10px;
 			line-height: 1.6;
+			font-weight: 700;
 			text-transform: uppercase;
 			letter-spacing: .8px;
-			top: calc(100% + 4px);
+			//top: calc(100% + 4px);
+			top: 8px;
 			white-space: nowrap;
+		}
+	}
+	@include media($phablet) {
+		button, a {
+			padding: 32px !important;
 		}
 	}
 }

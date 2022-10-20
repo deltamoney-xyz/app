@@ -10,6 +10,7 @@ export default function Button({
   type = "button",
   secondary = false, // variant
   disabled = false,
+  prelaunch = false,
   red = false,
   loading = false,
   size = "md",
@@ -23,7 +24,9 @@ export default function Button({
     [styles.sm]: size === "sm",
     [styles.md]: size === "md",
     [styles.lg]: size === "lg",
+    [styles.hg]: size === "hg",
     [styles.isDisabled]: disabled,
+    [styles.prelaunch]: prelaunch,
     [styles.secondary]: secondary,
     [styles.red]: red,
   });

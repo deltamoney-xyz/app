@@ -21,6 +21,7 @@
 
   /* Gradients */
   --gradient: linear-gradient(57.01deg, #3C40E6 4.64%, #03B3FF 79.83%);
+  //--gradient-hover: linear-gradient(57.01deg, #1C21F7 4.64%, #5ACDFF 79.83%);
   --gradient-hover: linear-gradient(57.01deg, #5961FF 4.64%, #5FCFFF 79.83%);
   --gradient-vault: linear-gradient(81.52deg, #403CE6 0%, #03B3FF 100%);
   --gradient-red: linear-gradient(57.01deg, #FF3003 4.64%, #E6563C 79.83%);
@@ -30,6 +31,7 @@
   --blue: #03B3FF;
   --purple-blue: #5961FF;
   --green: #13E868;
+  --deep-green: #21FF6C;
   --red: #FF4003;
 
   /* Alpha Colors */
@@ -118,6 +120,7 @@
 /* Libs */
 @import "./node_modules/react-loading-skeleton/dist/skeleton";
 @import "./node_modules/antd/lib/message/style";
+@import "~@splidejs/splide/dist/css/themes/splide-default.min";
 
 /* Base */
 @import "./base/fonts";

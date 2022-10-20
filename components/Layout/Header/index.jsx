@@ -48,7 +48,7 @@ export default function Header() {
           <PrimaryMenu opened={openedMenu} />
           <div className={styles.controls}>
             <div className={styles.button}>
-              <Button disabled size="sm">
+              <Button disabled prelaunch size="sm">
                 Launch App
               </Button>
               <span>Coming Soon</span>

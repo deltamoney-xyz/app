@@ -1,0 +1,79 @@
+@import "./styles/helpers/vars";
+@import "./styles/helpers/mixins";
+
+.title {
+	font-family: var(--font-mulish);
+	font-size: 64px;
+	line-height: 1.1;
+	margin: 0;
+	&.tac {
+		text-align: center;
+	}
+	&.gradient {
+		background: var(--gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	&.tiny {
+		font-size: 36px;
+	}
+	&.small {
+		font-size: 44px;
+	}
+	&.large {
+		font-size: 74px;
+		line-height: 1.1;
+	}
+	&.extralarge {
+		font-size: 6.15vw;
+		line-height: 1.1;
+		font-weight: 400;
+		letter-spacing: -4px;
+	}
+	&.huge {
+		font-size: 120px;
+		letter-spacing: -2px;
+		font-weight: 400;
+	}
+	img {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: -10px;
+	}
+	@include media($laptop-small) {
+		font-size: 52px;
+		&.tiny {
+			font-size: 36px;
+		}
+		&.small {
+			font-size: 44px;
+		}
+		&.large {
+			font-size: 48px;
+		}
+		&.extralarge {
+			font-size: 56px;
+		}
+		&.huge {
+			font-size: 74px;
+		}
+	}
+	@include media($tablet) {
+		&.large {
+			font-size: 36px;
+		}
+		&.extralarge {
+			font-size: 38px;
+		}
+	}
+	@include media($phone) {
+		font-size: 36px;
+		&.small {
+			font-size: 32px;
+		}
+		&.huge {
+			font-size: 48px;
+			letter-spacing: 0;
+		}
+	}
+}

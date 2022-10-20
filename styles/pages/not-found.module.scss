@@ -1,0 +1,90 @@
+@import "./styles/helpers/vars";
+@import "./styles/helpers/mixins";
+
+.page {
+  height: 100vh;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media($phone) {
+    background-image: none;
+    text-align: center;
+  }
+}
+
+.text {
+  .title {
+    font-size: 72px;
+    line-height: 72px;
+    font-weight: 700;
+    margin-top: 92px;
+  }
+
+  p {
+    font-size: 44px; //48px;
+    line-height: 56px;
+    font-weight: 700;
+    margin: 36px 0 48px;
+  }
+
+  @include media($tablet) {
+    .title {
+      font-size: 42px;
+      line-height: 42px;
+      margin-top: 52px;
+    }
+    p {
+      font-size: 24px;
+      line-height: 38px;
+      font-weight: 700;
+      margin: 24px 0 32px;
+    }
+  }
+  @include media($phone) {
+    .title {
+      font-size: 56px;
+      line-height: 56px;
+      margin-top: 42px;
+    }
+    p {
+      font-size: 24px;
+      line-height: 38px;
+      font-weight: 400;
+    }
+  }
+}
+
+.blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  position: relative;
+  @include media($phone) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.logo {
+  display: inline-block;
+  font-size: 0;
+  @include media($tablet) {
+    order: 1;
+  }
+}
+
+.img {
+  width: 100%;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+  &.img500{
+    img {
+      max-width: 85%;
+    }
+  }
+}

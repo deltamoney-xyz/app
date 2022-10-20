@@ -1,4 +1,9 @@
-body.hide-footer {
+body.hide-header-footer {
+	background-image: url('/static/img/pages/home/bg404.png');
+	background-size: cover;
+	header[class*="style_header"] {
+		display: none;
+	}
 	footer[class*="style_footer"] {
 		display: none;
 	}

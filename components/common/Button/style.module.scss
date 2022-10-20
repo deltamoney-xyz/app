@@ -46,13 +46,27 @@
   &.lg {
     height: 72px;
     font-size: 16px;
+    line-height: 22px;
     padding: 0 60px;
+  }
+
+  &.hg {
+    height: 72px;
+    font-size: 16px;
+    padding: 0 75px;
+    border-radius: 16px;
   }
 
   // Options
   &[disabled] {
     cursor: not-allowed;
     opacity: .3;
+    &.prelaunch{
+      background: transparent;
+      border: 2px solid var(--blue);
+      color:var(--blue);
+      opacity: 1;
+    }
   }
 
   &.isDisabled {
