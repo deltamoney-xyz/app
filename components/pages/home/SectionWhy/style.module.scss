@@ -23,12 +23,17 @@
 	border-radius: 16px;
 	text-align: center;
 	padding: 48px 24px 40px;
-
+	opacity: 0;
+	transform: scale(.85);
+	transition: var(--transition-long);
+	&.isVisible {
+		opacity: 1;
+		transform: scale(1);
+	}
 	p {
 		min-height: 3rem;
 	}
-
-	img {
+	img, svg {
 		display: block;
 		margin: 22px auto 0;
 	}
@@ -50,4 +55,143 @@
 	margin: 28px 0 0;
 	color: var(--text-secondary);
 	min-width: 48px;
+}
+
+.svgWhyOne {
+	path {
+		&:nth-child(1) {
+			animation: whyAnimOneOne 3s infinite;
+			animation-fill-mode: forwards;
+		}
+		&:nth-child(2) {
+			animation: whyAnimOneTwo 3s infinite;
+			animation-fill-mode: forwards;
+		}
+		&:nth-child(3) {
+			animation: whyAnimOneThree 3s infinite;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+.svgWhyTwo {
+	[fill] {
+		&:nth-child(1) {
+			animation: whyAnimTwoOne 3s infinite;
+			animation-fill-mode: forwards;
+		}
+		&:nth-child(2) {
+			animation: whyAnimTwoTwo 3s infinite;
+			animation-fill-mode: forwards;
+		}
+		&:nth-child(3) {
+			animation: whyAnimTwoThree 3s infinite;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+.svgWhyThree {
+	circle {
+		&:nth-child(3),
+		&:nth-child(5),
+		&:nth-child(8),
+		&:nth-child(11),
+		&:nth-child(14),
+		&:nth-child(16) {
+			animation: whyAnimThreeOne 3s infinite;
+			animation-fill-mode: backwards;
+		}
+		&:nth-child(1),
+		&:nth-child(6),
+		&:nth-child(10),
+		&:nth-child(15) {
+			animation: whyAnimThreeOne 3s infinite;
+			animation-fill-mode: backwards;
+			animation-delay: 1.5s;
+		}
+	}
+}
+
+@keyframes whyAnimOneOne {
+	0% {
+		stroke: #181939;
+	}
+	33% {
+		stroke: #1b1d41;
+	}
+	66% {
+		stroke: #20224d;
+	}
+}
+
+@keyframes whyAnimOneTwo {
+	0% {
+		fill: #282947;
+	}
+	33% {
+		fill: #2f3052;
+	}
+	66% {
+		fill: #323357;
+	}
+}
+
+@keyframes whyAnimOneThree {
+	0% {
+		stroke: #414363;
+	}
+	33% {
+		stroke: #3b3c59;
+	}
+	66% {
+		stroke: #34354f;
+	}
+}
+
+@keyframes whyAnimTwoOne {
+	0% {
+		fill: #181939;
+	}
+	33% {
+		fill: #1d1e44;
+	}
+	66% {
+		fill: #21224d;
+	}
+}
+
+@keyframes whyAnimTwoTwo {
+	0% {
+		fill: #282947;
+	}
+	33% {
+		fill: #2f3052;
+	}
+	66% {
+		fill: #34355b;
+	}
+}
+
+@keyframes whyAnimTwoThree {
+	0% {
+		fill: #8287AA;
+	}
+	33% {
+		fill: #717596;
+	}
+	66% {
+		fill: #676b8c;
+	}
+}
+
+@keyframes whyAnimThreeOne {
+	0%, 100% {
+		fill: #8287AA;
+		opacity: .28;
+	}
+	50% {
+		fill: #181939;
+		opacity: 1;
+	}
 }

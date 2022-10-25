@@ -1,18 +1,18 @@
 <svg width="222" height="222" viewBox="0 0 222 222" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="24" cy="24" r="24" fill="#181939"/>
-<circle cx="24" cy="82" r="24" fill="#181939"/>
-<circle opacity="0.28" cx="24" cy="140" r="24" fill="#8287AA"/>
-<circle cx="24" cy="198" r="24" fill="#181939"/>
-<circle opacity="0.28" cx="82" cy="24" r="24" fill="#8287AA"/>
-<circle cx="82" cy="82" r="24" fill="#181939"/>
-<circle cx="82" cy="140" r="24" fill="#181939"/>
-<circle opacity="0.28" cx="82" cy="198" r="24" fill="#8287AA"/>
-<circle cx="140" cy="24" r="24" fill="#181939"/>
-<circle cx="140" cy="82" r="24" fill="#181939"/>
-<circle opacity="0.28" cx="140" cy="140" r="24" fill="#8287AA"/>
-<circle cx="140" cy="198" r="24" fill="#181939"/>
-<circle cx="198" cy="24" r="24" fill="#181939"/>
-<circle opacity="0.28" cx="198" cy="82" r="24" fill="#8287AA"/>
-<circle cx="198" cy="140" r="24" fill="#181939"/>
-<circle opacity="0.28" cx="198" cy="198" r="24" fill="#8287AA"/>
+	<circle fill="#181939" cx="24" cy="24" r="24"/>
+	<circle fill="#181939" cx="24" cy="82" r="24"/>
+	<circle fill="#8287AA" opacity="0.28" cx="24" cy="140" r="24"/>
+	<circle fill="#181939" cx="24" cy="198" r="24"/>
+	<circle fill="#8287xAA" opacity="0.28" cx="82" cy="24" r="24"/>
+	<circle fill="#181939" cx="82" cy="82" r="24"/>
+	<circle fill="#181939" cx="82" cy="140" r="24"/>
+	<circle fill="#8287AA" opacity="0.28" cx="82" cy="198" r="24"/>
+	<circle fill="#181939" cx="140" cy="24" r="24"/>
+	<circle fill="#181939" cx="140" cy="82" r="24"/>
+	<circle fill="#8287AA" opacity="0.28" cx="140" cy="140" r="24"/>
+	<circle fill="#181939" cx="140" cy="198" r="24"/>
+	<circle fill="#181939" cx="198" cy="24" r="24"/>
+	<circle fill="#8287AA" opacity="0.28" cx="198" cy="82" r="24"/>
+	<circle fill="#181939" cx="198" cy="140" r="24"/>
+	<circle fill="#8287AA" opacity="0.28" cx="198" cy="198" r="24"/>
 </svg>

@@ -30,7 +30,7 @@ export default function Home({ data }) {
             <li>
               <Button
                 size="hg"
-                href="https://tally.so/r/wMek0g"
+                href="https://tally.so/r/wvXXNX"
                 target="_blank"
               >
                 Join Waitlist

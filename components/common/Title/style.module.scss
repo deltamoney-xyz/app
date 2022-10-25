@@ -4,6 +4,9 @@
 .title {
 	margin: 0;
 	font-family: var(--font-mulish);
+	opacity: 0;
+	transform: translateY(25px);
+	transition: var(--transition-long);
 	&.h1 {
 		font-size: 72px;
 		line-height: 1;
@@ -36,6 +39,10 @@
 	}
 	&.tac {
 		text-align: center;
+	}
+	&.isVisible {
+		opacity: 1;
+		transform: translateY(0);
 	}
 
 	@include media($tablet) {

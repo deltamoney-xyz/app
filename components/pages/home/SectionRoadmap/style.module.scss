@@ -13,12 +13,26 @@
 	text-align: center;
 	color: var(--blue);
 	margin-bottom: 16px;
+	opacity: 0;
+	transform: translateY(25px);
+	transition: var(--transition-long);
+	&.isVisible {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .desc {
 	margin: 16px 0 40px;
 	color: var(--text-secondary);
 	text-align: center;
+	opacity: 0;
+	transform: translateY(25px);
+	transition: var(--transition-long);
+	&.isVisible {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .block {
@@ -64,6 +78,7 @@
 	border-radius: 3px;
 	background: var(--blue);
 	position: relative;
+	transition: all 1s ease-in-out;
 	&:after {
 		content: attr(data-value)'%';
 		display: flex;
@@ -103,6 +118,11 @@
 	position: relative;
 	padding-left: 36px;
 	margin-bottom: 24px;
+	opacity: 0;
+	transition: var(--transition-long);
+	&.isVisible {
+		opacity: 1;
+	}
 	&:before {
 		content: '';
 		position: absolute;

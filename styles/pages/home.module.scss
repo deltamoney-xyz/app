@@ -29,6 +29,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	opacity: 0;
+	transform: scale(.85);
+	animation: fadeIn 1s .15s forwards;
 	li {
 		position: relative;
 		&:not(:last-child) {
@@ -60,7 +63,21 @@
 	margin: 96px auto 0;
 	max-width: 1036px;
 	font-size: 0;
+	opacity: 0;
+	transform: scale(.85);
+	animation: fadeIn 1s .3s forwards;
 	img {
 		border-radius: 16px;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: scale(.85);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
 	}
 }

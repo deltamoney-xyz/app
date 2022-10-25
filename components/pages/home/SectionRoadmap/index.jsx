@@ -1,3 +1,5 @@
+import { useState } from "react";
+import VisibilitySensor from "react-visibility-sensor";
 import classnames from "classnames";
 
 import Title from "components/common/Title";
@@ -8,13 +10,31 @@ export default function SectionRoadmap() {
   return (
     <section className={styles.section}>
       <div className="wrap">
-        <span className={styles.year}>
-          <b>2022</b>
-        </span>
+        <VisibilitySensor partialVisibility="bottom" offset={{ top: 150 }}>
+          {({ isVisible }) => (
+            <span
+              className={classnames(styles.year, {
+                [styles.isVisible]: isVisible,
+              })}
+            >
+              <b>2022</b>
+            </span>
+          )}
+        </VisibilitySensor>
         <Title type="h3" size="h2" tac>
           Road map
         </Title>
-        <p className={styles.desc}>Delta Money Roadmap</p>
+        <VisibilitySensor partialVisibility="bottom" offset={{ top: 150 }}>
+          {({ isVisible }) => (
+            <p
+              className={classnames(styles.desc, {
+                [styles.isVisible]: isVisible,
+              })}
+            >
+              Delta Money Roadmap
+            </p>
+          )}
+        </VisibilitySensor>
         <RoadMap />
       </div>
     </section>
@@ -57,36 +77,51 @@ const RoadMap = () => {
     },
   ];
 
+  const [isVisible, setIsVisible] = useState(false);
+
   const done = list.filter((item) => item.done).length;
-  const progress = Math.round((done * 100) / list.length);
+  const progress = isVisible ? Math.round((done * 100) / list.length) : 0;
 
   return (
     <div className={styles.block}>
       <div className={styles.label}>Progress</div>
-      <div className={styles.progress}>
-        <div
-          className={styles.fill}
-          style={{ width: progress + "%" }}
-          data-value={progress}
-        />
-      </div>
+      <VisibilitySensor partialVisibility="bottom">
+        {({ isVisible }) => {
+          setIsVisible(isVisible);
+          return (
+            <div className={styles.progress}>
+              <div
+                className={styles.fill}
+                style={{ width: progress + "%" }}
+                data-value={progress}
+              />
+            </div>
+          );
+        }}
+      </VisibilitySensor>
       <div className={styles.list}>
         {list.map((item, idx) => {
           const { done, label, children } = item;
           return (
-            <div
-              key={idx}
-              className={classnames(styles.item, { [styles.isDone]: done })}
-            >
-              <p>{label}</p>
-              {children && (
-                <ul>
-                  {children.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
+            <VisibilitySensor partialVisibility="bottom" key={idx}>
+              {({ isVisible }) => (
+                <div
+                  className={classnames(styles.item, {
+                    [styles.isDone]: done,
+                    [styles.isVisible]: isVisible,
+                  })}
+                >
+                  <p>{label}</p>
+                  {children && (
+                    <ul>
+                      {children.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               )}
-            </div>
+            </VisibilitySensor>
           );
         })}
         <ul className={styles.additional}>
