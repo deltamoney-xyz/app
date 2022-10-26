@@ -42,7 +42,6 @@ export default function Home({ data }) {
               </Button>
               <span>Coming Soon</span>
             </li>
-
             {/*<li><InternalLink href="/" target>View Docs</InternalLink></li>*/}
           </ul>
           <div className={styles.screenshot} id="section-overview">
