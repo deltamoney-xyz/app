@@ -14,11 +14,6 @@ export default function AppMenu() {
       icon: "/static/img/svg/icons/menu-staking.svg",
     },
     {
-      href: "/app/borrow",
-      label: "Borrow",
-      icon: "/static/img/svg/icons/menu-dashboard.svg",
-    },
-    {
       href: "/app/faucet",
       label: "Faucet",
       icon: "/static/img/svg/icons/menu-faucet.svg",

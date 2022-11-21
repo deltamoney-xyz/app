@@ -63,7 +63,7 @@ export default function SectionEarn() {
               ))}
             </div>
           </div>
-          <VisibilitySensor partialVisibility="bottom" offset={{ top: 150 }}>
+          <VisibilitySensor partialVisibility offset={{ bottom: 150 }}>
             {({ isVisible }) => (
               <div
                 className={classnames(styles.media, {
